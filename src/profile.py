@@ -8,3 +8,6 @@ class Profile:
 
     def add_favourite(self, movie):
         self.favourites.append(movie)
+
+    def remove_favourite(self, movie):
+        self.favourites.remove(movie)

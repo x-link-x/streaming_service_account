@@ -25,6 +25,15 @@ class TestProfile(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     # Test a Profile can remove a given Movie from favourites
+    def test_remove_favourite(self):
+        # Arrange
+        expected = 0
+        # Act
+        self.profile_1.add_favourite(self.movie_1)
+        self.profile_1.remove_favourite(self.movie_1)
+        actual = len(self.profile_1.favourites)
+        # Assert
+        self.assertEqual(expected, actual)
 
     # Test a Profile can return a list of Favourites
 
