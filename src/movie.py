@@ -4,4 +4,3 @@ class Movie:
         self.title = title
         self.director = director
         self.rating = rating
-        

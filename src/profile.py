@@ -5,7 +5,6 @@ class Profile:
         self.password = password
         self.favourites = []
 
-
     def add_favourite(self, movie):
         self.favourites.append(movie)
 
