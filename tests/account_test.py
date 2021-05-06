@@ -9,17 +9,16 @@ class TestAccount(unittest.TestCase):
         # Creating some objects to use in the tests
         self.profile_1 = Profile("harrisonF", "myP@assword")
         self.profile_2 = Profile("markH", "anotherP@ssword")
-        self.profile_3 = Profile("xlinkx", "p@ssw0rd")
         self.account_1 = Account("Jane", "Smith", "janes@email.com")
    
 
     # Test an Account can add a Profile
     def test_add_profile(self):
         # Arrange
-        expected = 1
+        expected = [self.profile_1]
         # Act
         self.account_1.add_profile(self.profile_1)
-        actual = len(self.account_1.profiles)
+        actual = self.account_1.profiles
         # Assert
         self.assertEqual(expected, actual)
         
@@ -39,11 +38,10 @@ class TestAccount(unittest.TestCase):
     # Test an Account can return a list of Profiles
     def test_get_profiles(self):
         # Arrange
-        expected = [self.profile_1, self.profile_2, self.profile_3]
+        expected = [self.profile_1, self.profile_2]
         # Act
         self.account_1.add_profile(self.profile_1)
         self.account_1.add_profile(self.profile_2)
-        self.account_1.add_profile(self.profile_3)
         actual = self.account_1.profiles
         # Assert
         self.assertEqual(expected, actual)
