@@ -11,3 +11,6 @@ class Profile:
 
     def remove_favourite(self, movie):
         self.favourites.remove(movie)
+
+    def get_favourites(self):
+        return self.favourites
