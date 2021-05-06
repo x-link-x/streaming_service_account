@@ -15,13 +15,14 @@ class TestProfile(unittest.TestCase):
         
 
     # Test a Profile can add a favourite Movie
-    # def test_add_favourite(self):
+    def test_add_favourite(self):
         # Arrange
-        expected = 1
+        expected = [self.movie_1]
         # Act
         self.profile_1.add_favourite(self.movie_1)
-
+        actual = self.profile_1.favourites
         # Assert
+        self.assertEqual(expected, actual)
 
     # Test a Profile can remove a given Movie from favourites
 

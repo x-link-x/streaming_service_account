@@ -45,5 +45,3 @@ class TestAccount(unittest.TestCase):
         actual = self.account_1.profiles
         # Assert
         self.assertEqual(expected, actual)
-
-   
