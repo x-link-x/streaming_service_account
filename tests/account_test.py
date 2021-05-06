@@ -42,6 +42,6 @@ class TestAccount(unittest.TestCase):
         # Act
         self.account_1.add_profile(self.profile_1)
         self.account_1.add_profile(self.profile_2)
-        actual = self.account_1.profiles
+        actual = self.account_1.get_profiles()
         # Assert
         self.assertEqual(expected, actual)

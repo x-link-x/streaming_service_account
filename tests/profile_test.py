@@ -36,5 +36,15 @@ class TestProfile(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     # Test a Profile can return a list of Favourites
+    def test_get_favourites(self):
+        # Arrange
+        expected = [self.movie_1, self.movie_2]
+        # Act
+        self.profile_1.add_favourite(self.movie_1)
+        self.profile_1.add_favourite(self.movie_2)
+        
+        actual = self.profile_1.get_favourites()
+        # Assert
+        self.assertEqual(expected, actual)
 
    
